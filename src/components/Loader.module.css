@@ -1,0 +1,17 @@
+.loaderContainer {
+	display: flex;
+	justify-content: center;
+	color: azure;
+
+	margin: 40px;
+}
+
+.loader {
+	animation: loader 1s linear infinite;
+}
+
+@keyframes loader {
+	to {
+		transform: rotate(360deg);
+	}
+}

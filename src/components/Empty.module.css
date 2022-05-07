@@ -1,0 +1,9 @@
+.empty {
+	display: flex;
+	justify-content: center;
+
+	color: azure;
+	font-size: 2rem;
+
+	margin: 40px;
+}
