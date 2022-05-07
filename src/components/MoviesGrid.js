@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useQuery } from '../hooks/useQuery';
 import { get } from '../utils/httpClient';
 import { MovieCard } from './MovieCard';
 import { Loader } from './Loader';
@@ -7,14 +6,11 @@ import { Empty } from './Empty';
 import styles from './MoviesGrid.module.css';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-export function MoviesGrid() {
+export function MoviesGrid({ search }) {
 	const [movies, setMovies] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [page, setPage] = useState(1);
 	const [hasMore, setHasMore] = useState(true);
-
-	const query = useQuery();
-	const search = query.get('search');
 
 	useEffect(() => {
 		setLoading(true);
